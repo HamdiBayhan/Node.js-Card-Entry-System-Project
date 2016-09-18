@@ -1,0 +1,52 @@
+<script>
+
+    function control()
+    {
+        var kartId = Number(document.getElementById('kartId').value);
+        var email = document.getElementById('email').value;
+        var isim = document.getElementById('isim').value;
+        var soyisim = document.getElementById('soyisim').value;
+
+       if(!isNaN(kartId) && kartId && !(email === "") && !(isim === "") && !(soyisim === ""))
+       {
+           alert("Kaydınız yapıldı");
+       }
+       else{
+           alert("Lutfen boşlukları uygun şekilde doldurunuz");
+       }
+
+    }
+
+</script>
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <h3>Sign In</h3>
+
+        <form action="/user/signin" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="kartId">Kart ID</label>
+                <input type="text" id="kartId" name="kartId" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="email">E-Mail</label>
+                <input type="text" id="email" name="email" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="isim">İsim</label>
+                <input type="text" id="isim" name="isim" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="soyisim">Soyisim</label>
+                <input type="text" id="soyisim" name="soyisim" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="image">Fotoğraf</label>
+                <input type="file"  name="image" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="control();" >Sign İn</button>
+        </form>
+
+    </div>
+</div>
+

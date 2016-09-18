@@ -1,0 +1,23 @@
+
+<table id="table" class="table table-bordered">
+
+    <tr class="active">
+        <th>KartId</th>
+        <th>E-Mail</th>
+        <th>İsim</th>
+        <th>Soyisim</th>
+        <th>Onayla</th>
+    </tr>
+
+    {{# each title }}
+    <tr class="success">
+        <td class="kartId">{{this.kartId}}</td>
+        <td>{{this.email}}</td>
+        <td>{{this.isim}}</td>
+        <td>{{this.soyisim}}</td>
+        <td><a href="/sendKartId/{{this.kartId}}" class="btn btn-success" role="button">Onayla</a> </td>
+    </tr>
+    {{/each}}
+
+</table>
+
